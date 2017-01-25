@@ -443,7 +443,7 @@ height:36px;
 }
 
 #contact input[type="submit"] {
-  background: #222;
+  background: #490a3d;
   border-radius: 100px;
   border: none;
   color: #ffffff;
@@ -452,7 +452,7 @@ height:36px;
 }
 
 #contact input[type="submit"]:hover {
-  background: #000;
+  background: #ff8087;
 }
 
 
