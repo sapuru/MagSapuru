@@ -346,7 +346,7 @@ Portfolio section
 
 						#portfolio .portfolio-thumb .portfolio-overlay {
 							position: absolute;
-							background: #222;
+							background: #490a3d;
 							color: #ffffff;
 							top: 0;
 							left: 0;
@@ -713,6 +713,10 @@ Mobile // Responsive
 							#blog-single-post .blog-post-title h2 {
 								font-size: 29px;
 								line-height: 40px;
+							}
+
+							.portfolio-thumb {
+								margin:15%;
 							}
 
 							footer {
