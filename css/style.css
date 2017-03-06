@@ -31,18 +31,25 @@ h2 {
 
 h3 {
 	font-size: 26px;
+	padding-bottom: 14px;
+	padding-top:14px;
 }
 
 h4 {
 	color: #ff8087;
-	font-size: 12px;
+	font-size: 18px;
 	font-weight: normal;
 	letter-spacing: 2px;
+	padding-bottom: 14px;
+	padding-top:14px;
 }
 
 h6 {
 	color: #a4bce2;
-	font-size:14px;
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 14px;
+	padding-top:14px;
 }
 
 p {
@@ -145,11 +152,11 @@ Preloader section
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
-	background: none repeat scroll 0 0 #ffffff;
+	background: none repeat scroll 0 0 #fed7c6;
 }
 
 .sk-spinner-wordpress.sk-spinner {
-	background-color: #bdc3c7;
+	background-color: #fff;
 	width: 40px;
 	height: 40px;
 	border-radius: 40px;
@@ -160,7 +167,7 @@ Preloader section
 
 .sk-spinner-wordpress .sk-inner-circle {
 	display: block;
-	background-color: #ffffff;
+	background-color: #fed7c6;
 	width: 16px;
 	height: 16px;
 	position: absolute;
