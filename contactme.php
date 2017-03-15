@@ -1,10 +1,92 @@
+<?php
+
+if(isset($_POST['email'])) {
+
+    $email_to = "aymarasamudio@gmail.com";
+
+    $email_subject = "Contacto Sapuru";
+
+
+    function died($error) {
+
+        // your error code can go here
+
+        echo "Hubo un error en tu mensaje. ";
+
+        echo "Podría tener que ver con lo siguiente: <br /><br />";
+
+        echo $error."<br /><br />";
+
+        echo "Por favor intentalo nuevamente.<br /><br />";
+
+        die();
+
+    }
+
+
+
+    // validation expected data exists
+
+    if(!isset($_POST['name']) ||
+
+        !isset($_POST['email']) ||
+
+        !isset($_POST['message'])) {
+
+        died('Disculpas, parece que hay un error en tu mensaje. Intenta nuevamente.');
+
+    }
+
+
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+
+    $email_message = "Detalles.\n\n";
+
+
+
+    function clean_string($string) {
+
+      $bad = array("content-type","bcc:","to:","cc:","href");
+
+      return str_replace($bad,"",$string);
+
+    }
+
+
+
+    $email_message .= "Name: ".clean_string($name)."\n";
+
+    $email_message .= "Email: ".clean_string($email)."\n";
+
+    $email_message .= "Message: ".clean_string($message)."\n";
+
+
+	// create email headers
+
+	$headers = 'From: '.$email."\r\n".
+
+	'Reply-To: '.$email."\r\n" .
+
+	'X-Mailer: PHP/' . phpversion();
+
+	@mail($email_to, $email_subject, $email_message, $headers);
+
+
+?>
+
+
+
+<!-- include your own success html here -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
 
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="description" content="Sapuru. Soluciones Web a medida para Profesionales, PyMEs y emprendimientos. De Aymará Samudio">
+<meta name="description" content="Aymará Samudio, Desarrollo Web">
 <meta name="keywords" content="Diseño Web, Soluciones Web a medida, Profesionales, PyMEs, Emprendimientos">
 <meta name="author" content="Aymará Samudio">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,17 +98,14 @@
 <meta property="og:type" content="site" />
 <meta property="og:url" content=" http://sapuru.soy" />
 <meta property="og:image" content=" http://sapuru.soy/images/ayma-mag.jpg" />
-<meta property="og:description" content="Soluciones Web a medida para Profesionales, PyMEs y emprendimientos. De Aymará Samudio." />
+<meta property="og:description" content="Soluciones Web a medida para Profesionales, PyMEs y emprendimientos." />
 <meta property="og:site_name" content="Sapuru" />
 
-
 <link rel="stylesheet" href="css/bootstrap.min.css">
-
 
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Muli" rel="stylesheet">
-
 </head>
 <body>
 
@@ -49,7 +128,7 @@
         <span class="icon icon-bar"></span>
         <span class="icon icon-bar"></span>
       </button>
-      <h1><a href="index" class="navbar-brand"><img src="images/logo-purple-vect.png" alt="Logo Sapuru"></a></h1>
+      <h1><a href="index" class="navbar-brand"><img src="images/logo-purple-vect.png"></a></h1>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
@@ -65,39 +144,21 @@
   </div>
 </div>
 
+<!-- Blog Single Post Section -->
 
-
-<!-- Contact Section -->
-
-<section id="contact">
+<section id="blog-single-post">
      <div class="container">
           <div class="row">
+                         <div class="blog-post-image">
+                              <img src="images/ayma-4.png" class="img-responsive" alt="Aymará Samudio">
+                         </div>
+                         <div class="center">
+                              <h2>Gracias por contactarme. Te responderé muy pronto.</h2>
+                              <h3>Mientras tanto te invito a visitar el <a href="http://blog.sapuru.soy">blog</a>, o a conocer <a href="acerca-de">mi historia</a></h3>
+                         </div>
 
-               <div class="col-md-offset-1 col-md-10 col-sm-12">
-                    <div class="section-title">
-                         <h3>contactame</h3>
-                         <h2>No importa el tamaño de tu idea o proyecto, trabajemos juntos. Será una experiencia enriquecedora.</h2>
-                    </div>
-
-                    <form action="contactme.php" method="post">
-                         <div class="col-md-6 col-sm-6">
-                              <input type="text" name="name" class="form-control" placeholder="Nombre">
-                         </div>
-                         <div class="col-md-6 col-sm-6">
-                              <input type="email" name="email" class="form-control" placeholder="Email">
-                         </div>
-                         <div class="col-md-12 col-sm-12">
-                              <textarea class="form-control" name="message" rows="5" placeholder="Escribe tu mensaje"></textarea>
-                         </div>
-                         <div class="col-md-3 col-sm-4">
-                              <input type="submit" class="form-control" value="Enviar">
-                         </div>
-                         <input type="hidden" name="_next" value="gracias" />
-                    </form>
-               </div>
-
-          </div>
      </div>
+   </div>
 </section>
 
 <!-- Footer Section -->
@@ -143,7 +204,6 @@
 </footer>
 
 
-
 <!-- SCRIPTS -->
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <script src="js/jquery.js"></script>
@@ -153,3 +213,11 @@
 
 </body>
 </html>
+
+
+
+<?php
+
+}
+
+?>
