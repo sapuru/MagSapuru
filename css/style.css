@@ -137,6 +137,30 @@ strong {
 	text-align:center;
 }
 
+.btn-pink {
+	border-radius: 100px;
+	color: #fff;
+  background: #ff8087;
+	font-family: 'Arima Madurai', cursive;
+	font-size:18px;
+	letter-spacing: 1px;
+	padding: 14px 28px;
+	margin-top: 26px;
+	transition: all 0.4s ease-in-out;
+}
+
+.btn-pink:hover {
+	background: #a4bce2;
+	border-color: transparent;
+	color: #ffffff;
+}
+
+.btn-pink:focus {
+	background-color: #490a3d;
+	color:#ffffff;
+	border-color: transparent;
+}
+
 /*---------------------------------------
 Preloader section
 -----------------------------------------*/
@@ -516,8 +540,7 @@ Blog section
 
 						.blog-post-des .btn {
 							border-radius: 100px;
-							color: #777;
-							font-weight: 400;
+							color: #fff;
 							letter-spacing: 1px;
 							padding: 14px 28px;
 							margin-top: 26px;
@@ -525,7 +548,7 @@ Blog section
 						}
 
 						.blog-post-des .btn:hover {
-							background: #000;
+							background: #a4bce2;
 							border-color: transparent;
 							color: #ffffff;
 						}
