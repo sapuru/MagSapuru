@@ -644,7 +644,22 @@ Blog Single Post section
 							padding-top: 16px;
 						}
 
+						/* Suscripcion Form */
+						#mc_embed_signup{
+							background:transparent;
+							clear:left;
+						 }
 
+						 #mc_embed_signup h2 {
+						    color: ;
+							}
+							#mc_embed_signup .mc-field-group label {
+							    color: ;
+							}
+
+							#mc_embed_signup .button {
+						    background-color: ;
+							}
 
 /*---------------------------------------
 Footer section
