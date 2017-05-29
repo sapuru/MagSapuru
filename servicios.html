@@ -78,8 +78,8 @@
 
         <p>Tu perfil profesional, idea o emprendimiento merece una <strong>presencia web que te enorgullezca</strong> y
           que ayude a construir tu reputación, consiga clientes y los mantenga en el tiempo.</p>
-          <p>Con este objetivo en mente preparé tres <strong>paquetes diferenciados</strong> de servicios para atender tus necesidades.
-            Aclaro que son paquetes integrales básicos y que en caso de tener otras necesidades se le pueden agregar servicios extra que serán presupuestados aparte para que obtengas exactamente lo que necesitas, ni más, ni menos.</p>
+          <p>Con este objetivo en mente preparé <strong>paquetes diferenciados</strong> de servicios para atender tus necesidades.
+            Aclaro que son paquetes integrales básicos al que se le pueden agregar servicios extra para que obtengas exactamente lo que necesitas, ni más, ni menos.</p>
             <p>¡Empecemos! </p>
             <div class="spacer"></div>
       </div>
@@ -118,8 +118,9 @@
 <section>
   <div class="container">
     <div class="row">
-      <div class="col-md-7">
-         <h3>Perfil Profesional</h3>
+      <div class="col-md-6">
+                 <img class="img-responsive" src="images/perfil-profesional.jpg"/>
+                          <h3>Perfil Profesional</h3>
             <p>Dale un impulso a tu <strong>marca personal</strong> en la web creando una página donde
               describir quién sos y qué tenés para ofrecer.</p>
               <p>Hiciste un gran esfuerzo por llegar a donde estás, es hora de mostrarlo al mundo, construir reputación y... clientes!!</p>
@@ -135,19 +136,12 @@
            <p>Valor: $2200</p>
          <div class="blog-post-des">
          <a href="http://mpago.la/xMQQ" class="btn btn-pink">¡Quiero mejorar mi perfil profesional!</a></div>
-      </div>
-      <div class="col-md-5">
-        <img class="img-responsive" src="images/perfil-profesional.jpg"/>
-      </div>
-    </div>
 
-        <hr>
+         					<button class="md-trigger" data-modal="modal-12">Just Me</button>
+      </div>
 
-    <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-6">
         <img class="img-responsive" src="images/emprendimiento.jpg"/>
-      </div>
-      <div class="col-md-7">
         <h3>Emprendimiento</h3>
         <p>Tu emprendimiento merece una presencia online que te haga sentir orgulloso y que permita que tus <strong>potenciales clientes</strong> te encuentren... <strong>y se queden!!</strong></p>
         <p>Incluye
@@ -163,32 +157,9 @@
         <div class="blog-post-des">
         <a href="http://mpago.la/37hV" class="btn btn-pink">¡Quiero mostrar mi emprendimiento!</a></div>
       </div>
-    </div>
 
-        <hr>
-
-        <div class="row">
-          <div class="col-md-7">
-             <h3>PyME</h3>
-             <p>Tu proyecto necesita algo más grande, que permita <strong>seguir creciendo con el tiempo</strong>, junto con vos.</p>
-             <p>Incluye:
-               <ul>
-                 <li>dominio propio y hosting por un año</li>
-                 <li>hasta 5 secciones definidas </li>
-                 <li>optimización para todos los dispositivos</li>
-                 <li>llamados a la acción</li>
-                 <li>formulario de contacto</li>
-                 <li>links a redes sociales</li>
-               </ul></p>
-             <p>Valor: $9780</p>
-             <div class="blog-post-des">
-             <a href="http://mpago.la/5OpR" class="btn btn-pink">¡Quiero crecer!</a></div>
-          </div>
-          <div class="col-md-5">
-            <img class="img-responsive" src="images/extensible.jpg"/>
-          </div>
-        </div>
 <hr>
+</div>
 </div>
 </section>
 
@@ -284,7 +255,7 @@
 web de emprendedores y profesionales independientes.</p>
 <p>Compriso SPAM 0.</p>
 </div>
-</div>        
+</div>
   </div>
 </section>
 
@@ -331,17 +302,49 @@ web de emprendedores y profesionales independientes.</p>
   </div>
 </footer>
 
+<div class="md-modal md-effect-12" id="modal-12">
+  <div class="md-content">
+    <h3>Modal Dialog</h3>
+    <div>
+      <p>This is a modal window. You can do the following things with it:</p>
+      <ul>
+        <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
+        <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
+        <li><strong>Close:</strong> click on the button below to close the modal.</li>
+      </ul>
+      <button class="md-close">Close me!</button>
+    </div>
+  </div>
+</div>
 
 <!-- SCRIPTS -->
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/modalEffects.js"></script>
+<script>
+  // this is important for IEs
+  var polyfilter_scriptpath = '/js/';
+</script>
+<script src="js/cssParser.js"></script>
+<script src="js/css-filters-polyfill.js"></script>
 <script>
   (function (w,i,d,g,e,t,s) {w[d] = w[d]||[];t= i.createElement(g);
     t.async=1;t.src=e;s=i.getElementsByTagName(g)[0];s.parentNode.insertBefore(t, s);
   })(window, document, '_gscq','script','//widgets.getsitecontrol.com/82552/script.js');
 </script>
+<!-- MailerLite Universal -->
+<script>
+(function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
+f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
+var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?'+(~~(new Date().getTime()/10000000));
+_.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
 
+var ml_account = ml('accounts', '765536', 'j4t2j7y7u6', 'load');
+</script>
+<!-- End MailerLite Universal -->
 </body>
 </html>
